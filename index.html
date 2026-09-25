@@ -142,4 +142,517 @@
   }
   .goal-strip .stat{ padding:14px 16px; border-right:1px solid var(--border); }
   .goal-strip .stat:last-child{ border-right:none; }
-  .goal-strip .stat .k{ font-size:11px;
+  .goal-strip .stat .k{ font-size:11px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
+  .goal-strip .stat .v{ font-size:17px; font-weight:700; }
+
+  .mtd-card{ padding:16px 18px; margin-bottom:22px; }
+  .mtd-card .mtd-head{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px; margin-bottom:12px; }
+  .mtd-card .mtd-title{ font-weight:800; font-size:14.5px; }
+  .mtd-card .mtd-sub{ font-size:12px; color:var(--ink-faint); }
+  .table-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table.mtd-table{ width:100%; border-collapse:collapse; min-width:480px; }
+  table.mtd-table th, table.mtd-table td{ text-align:left; padding:7px 6px; border-bottom:1px solid var(--border); font-size:13px; }
+  table.mtd-table th{ color:var(--ink-faint); font-weight:600; font-size:11.5px; text-transform:uppercase; letter-spacing:.04em; }
+  table.mtd-table td.num{ text-align:right; }
+  table.mtd-table .pct-bar{ display:flex; align-items:center; gap:8px; justify-content:flex-end; }
+  table.mtd-table .pct-bar .bar{ width:64px; }
+  table.mtd-table td.pace-ok{ color:var(--success); }
+  table.mtd-table td.pace-bad{ color:var(--danger); }
+  .pace-tag{ font-size:10.5px; font-weight:700; padding:2px 7px; border-radius:100px; }
+  .pace-tag.ok{ background:var(--success-soft); color:var(--success); }
+  .pace-tag.bad{ background:var(--danger-soft); color:var(--danger); }
+
+  .summary-row{ display:flex; gap:10px; margin-bottom:22px; flex-wrap:wrap; }
+  .summary-pill{
+    flex:1; min-width:130px; padding:12px 14px; border-radius:10px; display:flex; flex-direction:column; gap:2px;
+  }
+  .summary-pill .n{ font-size:20px; font-weight:800; }
+  .summary-pill .l{ font-size:12px; color:var(--ink-soft); }
+  .summary-pill.ok{ background:var(--success-soft); }
+  .summary-pill.ok .n{ color:var(--success); }
+  .summary-pill.bad{ background:var(--danger-soft); }
+  .summary-pill.bad .n{ color:var(--danger); }
+  .summary-pill.pending{ background:var(--surface-2); }
+  .summary-pill.pending .n{ color:var(--ink-soft); }
+
+  .weeks{ display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:14px; }
+
+  .week-card{ padding:16px; display:flex; flex-direction:column; gap:12px; }
+  .week-card .wk-head{ display:flex; justify-content:space-between; align-items:baseline; }
+  .week-card .wk-title{ font-weight:800; font-size:14.5px; }
+  .week-card .wk-range{ font-size:11.5px; color:var(--ink-faint); }
+
+  .status-pill{
+    display:inline-flex; align-items:center; gap:5px; font-size:11.5px; font-weight:700;
+    padding:3px 9px; border-radius:100px; width:fit-content;
+  }
+  .status-pill.ok{ background:var(--success-soft); color:var(--success); }
+  .status-pill.bad{ background:var(--danger-soft); color:var(--danger); }
+  .status-pill.pending{ background:var(--surface-2); color:var(--ink-faint); }
+
+  .primary-metric{ display:flex; align-items:baseline; gap:8px; }
+  .primary-metric .val{ font-size:24px; font-weight:800; }
+  .primary-metric .of{ font-size:13px; color:var(--ink-faint); }
+  .bar{ height:6px; border-radius:100px; background:var(--surface-2); overflow:hidden; }
+  .bar > i{ display:block; height:100%; border-radius:100px; background:var(--accent); }
+  .bar.ok > i{ background:var(--success); }
+  .bar.bad > i{ background:var(--danger); }
+
+  details.funnel{ font-size:13px; }
+  details.funnel summary{
+    cursor:pointer; color:var(--accent); font-weight:600; font-size:12.5px; list-style:none;
+  }
+  details.funnel summary::-webkit-details-marker{ display:none; }
+  details.funnel summary::before{ content:'Ver funil completo ▸ '; }
+  details.funnel[open] summary::before{ content:'Ocultar funil ▾ '; }
+  table.funnel-table{ width:100%; border-collapse:collapse; margin-top:8px; }
+  table.funnel-table th, table.funnel-table td{
+    text-align:left; padding:5px 6px; border-bottom:1px solid var(--border); font-size:12.5px;
+  }
+  table.funnel-table th{ color:var(--ink-faint); font-weight:600; }
+  table.funnel-table td.num{ text-align:right; }
+  table.funnel-table td.hit{ color:var(--success); }
+  table.funnel-table td.miss{ color:var(--danger); }
+
+  .fca{ border-radius:10px; padding:11px 12px; font-size:13px; display:flex; flex-direction:column; gap:6px; }
+  .fca.filled{ background:var(--danger-soft); }
+  .fca.partial{ background:var(--warning-soft); }
+  .fca.waiting{ background:var(--surface-2); color:var(--ink-soft); font-style:italic; }
+  .fca .row{ display:flex; gap:6px; }
+  .fca .row b{ min-width:44px; color:var(--ink); font-weight:700; }
+  .fca .row span{ color:var(--ink-soft); }
+
+  .wk-empty{ font-size:12.5px; color:var(--ink-faint); padding:6px 0; }
+
+  .loading, .noclient{ padding:40px 0; text-align:center; color:var(--ink-faint); font-size:14px; }
+  .example-tag{ font-size:10.5px; color:var(--ink-faint); font-weight:600; text-transform:uppercase; letter-spacing:.05em; }
+
+  footer.hint{
+    margin-top:34px; padding-top:16px; border-top:1px solid var(--border);
+    font-size:12.5px; color:var(--ink-faint);
+  }
+
+  .updated-note{
+    background:var(--surface-2); color:var(--ink-soft); border-radius:10px;
+    padding:10px 14px; font-size:12.5px; font-weight:600; margin-bottom:18px;
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="top">
+    <div>
+      <h1>Alinhamento Falcon ACC + GT Igor Santos</h1>
+      <p>Meta mensal dividida em 4 semanas, resultado de sexta a sexta e plano de ação (FCA) quando a meta não bate.</p>
+    </div>
+    <div class="month-picker">
+      <label for="month-select">Mês</label>
+      <select id="month-select"></select>
+    </div>
+  </header>
+
+  <div id="updated-note" class="updated-note"></div>
+
+  <div class="layout">
+    <nav class="client-nav" id="client-nav"></nav>
+    <main id="main"></main>
+  </div>
+
+  <footer class="hint">
+    Este painel é um relatório fixo, sem login necessário — qualquer pessoa do time pode abrir o link. Metas mensais,
+    resultados semanais e FCA são lançados pelo Igor a partir das conversas de sexta-feira; os campos não são
+    editáveis diretamente aqui.
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // Fonte única dos dados do painel — um JSON simples, editado à mão (por
+  // mim, via chat com o Igor) toda vez que sai um resultado novo, e
+  // republicado. Não depende de login nem de banco de dados ao vivo: é só
+  // HTML + JSON estático, então qualquer pessoa do time abre o link direto,
+  // com ou sem conta Claude. "generatedAt" é só a data/hora da última
+  // atualização, mostrada no topo do painel.
+  var DATA = {
+    generatedAt: "2026-09-25T19:50:00Z",
+    clients: [
+      {id:"drogalis", name:"Drogalis", type:"inside_sales", order:1},
+      {id:"official-time", name:"Official Time", type:"ecommerce", order:2},
+      {id:"gsc", name:"GSC", type:"inside_sales", order:3, anchor:"mqls"},
+      {id:"miyamura", name:"Miyamura", type:"inside_sales", order:4},
+      {id:"point-thermic", name:"Point Thermic", type:"inside_sales", order:5},
+      {id:"alice-salazar", name:"Alice Salazar", type:"inside_sales", order:6, anchor:"sqls"},
+      {id:"viagem-dos-sonhos", name:"Viagem Dos Sonhos", type:"inside_sales", order:7},
+      {id:"argiplam", name:"Argiplam", type:"inside_sales", order:8},
+      {id:"sacrarium-hotel", name:"Sacrarium Hotel", type:"inside_sales", order:9}
+    ],
+    months: {
+      "drogalis/2026-09": {"goals":{"cpl":15,"investimento":2000,"leads":133},"mtd":{"as_of":"2026-09-24","realizado":{"cpl":12.35,"investimento":1691.46,"leads":137}},"weekly_targets":{"cpl":15,"investimento":500,"leads":33.25},"weeks":{"1":{"meta_batida":true,"realizado":{"cpl":9.91,"investimento":614.64,"leads":62}},"2":{"meta_batida":true,"realizado":{"cpl":13.97,"investimento":572.67,"leads":41}},"3":{"meta_batida":false,"realizado":{"cpl":15.23,"investimento":365.58,"leads":24},"fca":{"fato":"Não bateu a meta de leads: 24 leads na semana vs meta de 33.","causa":"Criativos saturados.","acao":"Última semana de projeto."}}}},
+      "official-time/2026-09": {"goals":{"custo_venda":195,"faturamento":55000,"investimento":4000,"roas":15.71,"ticket_medio":1350,"vendas":26},"mtd":{"as_of":"2026-09-24","realizado":{"custo_venda":165.59,"faturamento":40750.93,"investimento":3808.47,"roas":10.7,"ticket_medio":1771.78,"vendas":23}},"weekly_targets":{"custo_venda":195,"faturamento":13750,"investimento":1000,"roas":15.71,"ticket_medio":1350,"vendas":6.5},"weeks":{"1":{"fca":{"acao":"Subimos novos criativos em PMAX, criamos uma campanha de Shopping isolada, e vamos testar nova moldura de catálogo com criativos novos.","causa":"CPM caro (provavelmente por conta das eleições), e o funil ainda está em validação: testando criativos e página de destino para achar onde está a maior perda.","fato":"Vendas bateram a meta da semana (9), mas Faturamento (R$12.342 vs meta de R$13.750) e ROAS (10,06x vs meta de 15,71x) ficaram abaixo do esperado."},"meta_batida":true,"realizado":{"custo_venda":136.32,"faturamento":12342,"investimento":1226.89,"roas":10.06,"ticket_medio":1371.33,"vendas":9}},"2":{"fca":{"acao":"","causa":"","fato":"Vendas ficaram dentro da média, mas não bateu a meta por pouco (6 vendas vs meta semanal de 6,5). Faturamento (R$13.511,49 vs meta de R$13.750) e ROAS (10,71x vs meta de 15,71x) também ficaram próximos, mas abaixo do esperado."},"meta_batida":false,"realizado":{"custo_venda":210.25,"faturamento":13511.49,"investimento":1261.52,"roas":10.71,"ticket_medio":2251.92,"vendas":6}},"3":{"meta_batida":true,"realizado":{"custo_venda":154.15,"faturamento":14341.77,"investimento":1079.05,"roas":13.29,"ticket_medio":2048.82,"vendas":7}}}},
+      "gsc/2026-09": {"goals":{"cpl":66,"custo_mql":142.85,"custo_sql":166.66,"investimento":2000,"leads":30,"mqls":14,"sqls":12,"vendas":2},"mtd":{"as_of":"2026-09-24","realizado":{"cpl":163.4,"custo_mql":245.09,"custo_sql":392.15,"investimento":1960.74,"leads":12,"mqls":8,"sqls":5}},"weekly_targets":{"cpl":66,"custo_mql":142.85,"custo_sql":166.66,"investimento":500,"leads":7.5,"mqls":3.5,"sqls":3,"vendas":0.5},"weeks":{"1":{"fca":{"acao":"Voltar a usar o Meta Ads e enviar o tráfego direto pra LP, além de trabalhar a LP no Google com um teste A/B (a otimização de campanha no Google já foi feita).","causa":"Não teve muitos leads gerados na semana, mas os que geraram são qualificados.","fato":"Não bateu a meta de Leads nem o número de MQL (2 leads e 1 MQL vs meta semanal de 7,5 leads e 3,5 MQLs)."},"realizado":{"cpl":252.01,"custo_mql":504.01,"custo_sql":504.01,"investimento":504.01,"leads":2,"mqls":1,"sqls":1}},"2":{"fca":{"acao":"Subimos a nova LP, campanha do Meta rodando otimizações pontuais no Google e trabalhando teste A/B com o site também.","causa":"","fato":"Não bateu a meta de Leads mas bateu a de MQL (6 leads vs meta semanal de 7,5; 4 MQLs vs meta semanal de 3,5)."},"meta_batida":true,"realizado":{"cpl":99.18,"custo_mql":148.77,"custo_sql":595.08,"investimento":595.08,"leads":6,"mqls":4,"sqls":1}},"3":{"meta_batida":false,"realizado":{"cpl":196.19,"custo_mql":294.28,"custo_sql":294.28,"investimento":588.56,"leads":3,"mqls":2,"sqls":2},"fca":{"fato":"Não bateu a meta de leads nem de MQL (3 leads vs meta semanal de 7,5; 2 MQLs vs meta semanal de 3,5).","causa":"Ainda não subimos o Meta Ads com foco na nova LP.","acao":"Testar o Meta Ads com a nova LP e utilizar os novos criativos."}}}},
+      "miyamura/2026-09": {"goals":{"cpl":41.66,"custo_mql":100,"custo_sql":285.71,"investimento":2000,"leads":48,"mqls":20,"sqls":7},"mtd":{"as_of":"2026-09-24","realizado":{"cpl":39.22,"custo_mql":679.86,"custo_sql":679.86,"investimento":2039.58,"leads":52,"mqls":3,"sqls":3}},"weekly_targets":{"cpl":41.66,"custo_mql":100,"custo_sql":285.71,"investimento":500,"leads":12,"mqls":5,"sqls":1.75},"weeks":{"1":{"fca":{"acao":"Produzir mais criativos com ganchos diferentes, de preferência em vídeo, e focar nos estados com mais pesquisas no Google.","causa":"Não teve um grande número de leads gerados, e agora está saindo mais caro por lead.","fato":"Não bateu a meta de Leads nem o número de MQL (10 leads e 2 MQLs vs meta semanal de 12 leads e 5 MQLs)."},"meta_batida":true,"realizado":{"cpl":59.08,"custo_mql":295.4,"custo_sql":295.4,"investimento":590.79,"leads":10,"mqls":2,"sqls":2}},"2":{"fca":{"acao":"Otimização pontual no Google e meta produzir mais criativos.","causa":"Também estamos sem visão completa do funil, pois alguns leads não estão sendo marcados nem como descartados nem como MQL.","fato":"Não bateu a meta de MQL (1 MQL vs meta semanal de 5; SQL 1 vs meta semanal de 1,75)."},"meta_batida":false,"realizado":{"cpl":46.49,"custo_mql":557.92,"custo_sql":557.92,"investimento":557.92,"leads":12,"mqls":1,"sqls":1}},"3":{"realizado":{"cpl":36.52,"investimento":584.36,"leads":16},"fca":{"fato":"Bateu a meta de leads (16 vs meta semanal de 12), mas estamos sem visão de parte dos leads de MQL/SQL, então não dá pra medir o indicador-âncora da semana.","causa":"","acao":""}}}},
+      "point-thermic/2026-09": {"goals":{"cpl":77.77,"custo_mql":250,"custo_sql":500,"investimento":3500,"leads":45,"mqls":14,"sqls":7},"mtd":{"as_of":"2026-09-24","realizado":{"cpl":37.59,"investimento":2743.77,"leads":73}},"weekly_targets":{"cpl":77.77,"custo_mql":250,"custo_sql":500,"investimento":875,"leads":11.25,"mqls":3.5,"sqls":1.75},"weeks":{"1":{"fca":{"acao":"Produzir os criativos de acordo com a última otimização, com antes e depois dos serviços prestados, em imagem e vídeo.","causa":"","fato":"Sem visão do CRM deles, mas o cliente deu o feedback que estão com 3 propostas em andamento."},"realizado":{"cpl":50.1,"investimento":851.77,"leads":17}},"2":{"fca":{"acao":"Rever o CRM que eles usam hoje — do jeito que está não conseguimos ter visão de nada nem agilidade comercial.","causa":"","fato":"Sem visão de MQL e SQL essa semana."},"realizado":{"cpl":44.74,"investimento":850,"leads":19}},"3":{"fca":{"acao":"Vamos nos reunir com o time interno deles para saber a melhor opção para validar e ter tudo mapeado.","causa":"","fato":"Estamos sem visão de parte dos leads de MQL/SQL (25 leads na semana vs meta semanal de 11,25)."},"realizado":{"cpl":30.33,"investimento":758.22,"leads":25}}}},
+      "alice-salazar/2026-09": {"goals":{"cpl":14.7,"custo_mql":83.33,"custo_sql":277.78,"custo_venda":1250,"investimento":5000,"leads":340,"mqls":60,"sqls":18,"vendas":4},"mtd":{"as_of":"2026-09-24","realizado":{"cpl":19.81,"custo_mql":111.22,"custo_sql":195.76,"custo_venda":4893.89,"investimento":4893.89,"leads":247,"mqls":44,"sqls":25,"vendas":1}},"weekly_targets":{"cpl":14.7,"custo_mql":83.33,"custo_sql":277.78,"custo_venda":1250,"investimento":1250,"leads":85,"mqls":15,"sqls":4.5,"vendas":1},"weeks":{"1":{"meta_batida":true,"realizado":{"cpl":42.95,"custo_mql":105.95,"custo_sql":397.32,"custo_venda":1589.29,"investimento":1589.29,"leads":37,"mqls":15,"sqls":4,"vendas":1}},"2":{"meta_batida":true,"realizado":{"cpl":8.92,"custo_mql":108.61,"custo_sql":108.61,"investimento":1194.76,"leads":134,"mqls":11,"sqls":11,"vendas":0}},"3":{"meta_batida":true,"realizado":{"cpl":24.91,"custo_mql":132.03,"custo_sql":132.03,"investimento":1320.27,"leads":53,"mqls":10,"sqls":10},"fca":{"fato":"Bateu a meta de SQL (10 vs meta semanal de 4,5), mas Leads (53 vs 85) e MQL (10 vs 15) ficaram abaixo, com CPL de R$24,91 vs meta de R$14,70.","causa":"43 leads sem classificação/visão.","acao":""}}}},
+      "viagem-dos-sonhos/2026-09": {"goals":{"cpl":7.19,"custo_mql":37.04,"custo_sql":90.91,"investimento":2000,"leads":278,"mqls":54,"sqls":22},"mtd":{"as_of":"2026-09-24","realizado":{"cpl":3.62,"custo_mql":58.18,"custo_sql":166.23,"investimento":1163.62,"leads":321,"mqls":20,"sqls":7}},"weekly_targets":{"cpl":7.19,"custo_mql":37.04,"custo_sql":90.91,"investimento":500,"leads":69.5,"mqls":13.5,"sqls":5.5},"weeks":{"1":{"fca":{"acao":"Produzir criativos buscando qualificar melhor o lead, testando vídeos, e fazer uma entrega a mais pro cliente: a LP.","causa":"","fato":"Não bateu a meta de MQL (6 vs meta semanal de 13,5)."},"meta_batida":false,"realizado":{"cpl":4.42,"custo_mql":59.63,"custo_sql":119.26,"investimento":357.78,"leads":81,"mqls":6,"sqls":3}},"2":{"fca":{"acao":"Tem 29 leads sem classificação, e subimos nova campanha buscando qualificar melhor o lead.","causa":"","fato":"Não bateu a meta de MQL e SQL (8 MQLs e 4 SQLs vs meta semanal de 13,5 MQLs e 5,5 SQLs)."},"meta_batida":false,"realizado":{"cpl":2.96,"custo_mql":43.27,"custo_sql":86.54,"investimento":346.17,"leads":117,"mqls":8,"sqls":4}},"3":{"fca":{"acao":"","causa":"A planilha não foi preenchida a partir do dia 18.","fato":"Sem visão de MQL e SQL na semana (89 leads vs meta semanal de 69,5)."},"realizado":{"cpl":3.28,"investimento":291.91,"leads":89}}}},
+      "argiplam/2026-09": {"goals":{"cpl":25,"custo_mql":71.43,"custo_sql":250,"investimento":2000,"leads":80,"mqls":28,"sqls":8},"mtd":{"as_of":"2026-09-24","realizado":{"cpl":11.24,"custo_mql":28.8,"custo_sql":76.81,"investimento":460.87,"leads":41,"mqls":16,"sqls":6}},"weekly_targets":{"cpl":25,"custo_mql":71.43,"custo_sql":250,"investimento":500,"leads":20,"mqls":7,"sqls":2},"weeks":{"2":{"meta_batida":false,"realizado":{"cpl":17.27,"investimento":120.91,"leads":7,"mqls":2,"sqls":0}},"3":{"meta_batida":true,"realizado":{"cpl":10,"custo_mql":24.28,"custo_sql":56.66,"investimento":339.96,"leads":34,"mqls":14,"sqls":6},"fca":{"fato":"Cliente ainda não preencheu a planilha de forma correta.","causa":"","acao":""}}}},
+      "sacrarium-hotel/2026-09": {"goals":{"investimento":2000,"cpl":10,"leads":200,"tx_mql":50,"mqls":100,"custo_mql":20,"tx_sql":40,"sqls":40,"custo_sql":50},"weekly_targets":{"investimento":500,"cpl":10,"leads":50,"tx_mql":50,"mqls":25,"custo_mql":20,"tx_sql":40,"sqls":10,"custo_sql":50},"weeks":{"3":{"realizado":{"cpl":1.47,"investimento":27.84,"leads":19}}},"mtd":{"as_of":"2026-09-24","realizado":{"cpl":1.47,"investimento":27.84,"leads":19}}}
+    }
+  };
+
+  var INDICATORS = {
+    inside_sales: [
+      {key:'investimento', label:'Investimento', unit:'currency', cumulative:true, dir:'fixed'},
+      {key:'cpl', label:'CPL Global', unit:'currency', cumulative:false, dir:'lower'},
+      {key:'leads', label:'Nº de Leads', unit:'count', cumulative:true, dir:'higher'},
+      {key:'tx_mql', label:'Tx. Leads → MQL', unit:'percent', cumulative:false, dir:'higher'},
+      {key:'mqls', label:'Nº de MQLs', unit:'count', cumulative:true, dir:'higher'},
+      {key:'custo_mql', label:'Custo por MQL', unit:'currency', cumulative:false, dir:'lower'},
+      {key:'tx_sql', label:'Tx. MQL → SQL', unit:'percent', cumulative:false, dir:'higher'},
+      {key:'sqls', label:'Nº de SQLs', unit:'count', cumulative:true, dir:'higher'},
+      {key:'custo_sql', label:'Custo SQL', unit:'currency', cumulative:false, dir:'lower'},
+      {key:'tx_venda', label:'Tx. Conversão em Venda', unit:'percent', cumulative:false, dir:'higher'},
+      {key:'vendas', label:'Vendas', unit:'count1', cumulative:true, dir:'higher', primary:true},
+      {key:'custo_venda', label:'Custo por Venda', unit:'currency', cumulative:false, dir:'lower'},
+      {key:'ticket_medio', label:'Ticket Médio', unit:'currency', cumulative:false, dir:'fixed'},
+      {key:'faturamento', label:'Faturamento Previsto', unit:'currency', cumulative:true, dir:'higher'},
+      {key:'roas', label:'ROAS', unit:'decimal', cumulative:false, dir:'higher'}
+    ],
+    ecommerce: [
+      {key:'investimento', label:'Investimento', unit:'currency', cumulative:true, dir:'fixed'},
+      {key:'vendas', label:'Vendas', unit:'count1', cumulative:true, dir:'higher', primary:true},
+      {key:'custo_venda', label:'Custo por Venda', unit:'currency', cumulative:false, dir:'lower'},
+      {key:'ticket_medio', label:'Ticket Médio', unit:'currency', cumulative:false, dir:'fixed'},
+      {key:'faturamento', label:'Faturamento Previsto', unit:'currency', cumulative:true, dir:'higher'},
+      {key:'roas', label:'ROAS', unit:'decimal', cumulative:false, dir:'higher'}
+    ]
+  };
+
+  var TYPE_LABEL = {inside_sales:'Inside Sales', ecommerce:'E-commerce'};
+  var TYPE_BADGE = {inside_sales:'type-inside', ecommerce:'type-ecom'};
+  var TYPE_ORDER = ['inside_sales', 'ecommerce'];
+
+  function fmt(v, unit){
+    if (v === null || v === undefined || v === '') return '—';
+    var n = Number(v);
+    if (isNaN(n)) return String(v);
+    if (unit === 'currency') return n.toLocaleString('pt-BR', {style:'currency', currency:'BRL', maximumFractionDigits: n < 1000 ? 2 : 0});
+    if (unit === 'percent') return n.toFixed(1).replace('.', ',') + '%';
+    if (unit === 'decimal') return n.toFixed(2).replace('.', ',') + 'x';
+    if (unit === 'count1') return n.toFixed(1).replace('.', ',');
+    return Math.round(n).toLocaleString('pt-BR');
+  }
+
+  function monthLabel(ym){
+    var parts = ym.split('-'); var y = +parts[0], m = +parts[1];
+    var names = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    return names[m-1] + '/' + y;
+  }
+
+  function weekRanges(ym){
+    // Ciclo do time: semana vai de sexta a quinta. As 4 semanas do mês
+    // começam na primeira sexta-feira do mês; a 4ª semana absorve os
+    // dias restantes até o fim do mês (meses não dividem exato em 4×7).
+    var parts = ym.split('-'); var y = +parts[0], m = +parts[1];
+    var lastDay = new Date(y, m, 0).getDate();
+    var first = new Date(y, m - 1, 1);
+    var offsetToFriday = (5 - first.getDay() + 7) % 7; // 5 = sexta-feira
+    var firstFriday = 1 + offsetToFriday;
+    var starts = [firstFriday, firstFriday + 7, firstFriday + 14, firstFriday + 21];
+    return starts.map(function(s, i){
+      var end = i < 3 ? s + 6 : lastDay;
+      var label = 'Semana ' + (i + 1);
+      var range = pad2(s) + '/' + pad2(m) + '–' + pad2(Math.min(end, lastDay)) + '/' + pad2(m) +
+        (end > lastDay ? ' (segue no mês seguinte)' : '');
+      return { n: i + 1, label: label, range: range + ' · sex a qui' };
+    });
+  }
+  function pad2(n){ return String(n).padStart(2, '0'); }
+
+  function monthProgressPct(ym, asOf){
+    var parts = ym.split('-'); var y = +parts[0], m = +parts[1];
+    var totalDays = new Date(y, m, 0).getDate();
+    var ref = asOf ? (function(){ var p = asOf.split('-'); return { y:+p[0], m:+p[1], d:+p[2] }; })()
+      : (function(){ var t = new Date(); return { y:t.getFullYear(), m:t.getMonth()+1, d:t.getDate() }; })();
+    var dayNum;
+    if (ref.y === y && ref.m === m) dayNum = ref.d;
+    else if (ref.y > y || (ref.y === y && ref.m > m)) dayNum = totalDays; // mês já passou
+    else dayNum = 0; // mês ainda não começou
+    return { dayNum: Math.min(dayNum, totalDays), totalDays: totalDays, pct: Math.min(100, (dayNum / totalDays) * 100) };
+  }
+
+  function monthOptions(){
+    var now = new Date();
+    var opts = [];
+    for (var d = -3; d <= 2; d++){
+      var dt = new Date(now.getFullYear(), now.getMonth() + d, 1);
+      var ym = dt.getFullYear() + '-' + String(dt.getMonth()+1).padStart(2,'0');
+      opts.push(ym);
+    }
+    return opts;
+  }
+
+  var state = { clients:[], selectedClient:null, month:null };
+
+  var monthSelect = document.getElementById('month-select');
+  monthOptions().forEach(function(ym){
+    var o = document.createElement('option'); o.value = ym; o.textContent = monthLabel(ym);
+    monthSelect.appendChild(o);
+  });
+  var now = new Date();
+  state.month = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0');
+  monthSelect.value = state.month;
+  monthSelect.addEventListener('change', function(){
+    state.month = monthSelect.value;
+    renderMain();
+  });
+
+  function renderNav(){
+    var nav = document.getElementById('client-nav');
+    if (!state.clients.length){
+      nav.innerHTML = '<div class="empty-nav">Nenhum cliente cadastrado ainda. Os clientes aparecem aqui assim que forem lançados.</div>';
+      return;
+    }
+    var groups = {};
+    state.clients.forEach(function(c){ (groups[c.type] || (groups[c.type] = [])).push(c); });
+    var typesPresent = TYPE_ORDER.concat(Object.keys(groups).filter(function(t){ return TYPE_ORDER.indexOf(t) === -1; }));
+    var html = '';
+    typesPresent.forEach(function(type){
+      var list = groups[type];
+      if (!list || !list.length) return;
+      html += '<div class="client-group"><h2>' + (TYPE_LABEL[type] || type) + '</h2><ul class="client-list">';
+      list.forEach(function(c){
+        var active = c.id === state.selectedClient ? ' active' : '';
+        html += '<li><button class="' + active.trim() + '" data-id="' + c.id + '">' + escapeHtml(c.name) + '</button></li>';
+      });
+      html += '</ul></div>';
+    });
+    nav.innerHTML = html;
+    nav.querySelectorAll('button[data-id]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        state.selectedClient = btn.getAttribute('data-id');
+        renderNav();
+        renderMain();
+      });
+    });
+  }
+
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function renderMain(){
+    var main = document.getElementById('main');
+
+    if (!state.selectedClient){
+      main.innerHTML = '<div class="noclient">Escolha um cliente na lista ao lado.</div>';
+      return;
+    }
+    var client = state.clients.find(function(c){ return c.id === state.selectedClient; });
+    if (!client) return;
+
+    var monthData = DATA.months[client.id + '/' + state.month] || null;
+    renderClientShell(client, monthData);
+  }
+
+  function formatUpdatedDate(iso){
+    try{
+      var d = new Date(iso);
+      var dd = String(d.getDate()).padStart(2,'0');
+      var mm = String(d.getMonth()+1).padStart(2,'0');
+      var hh = String(d.getHours()).padStart(2,'0');
+      var mi = String(d.getMinutes()).padStart(2,'0');
+      return dd + '/' + mm + ' às ' + hh + ':' + mi;
+    }catch(e){ return iso; }
+  }
+
+  function renderClientShell(client, monthData){
+    var main = document.getElementById('main');
+    var indicators = INDICATORS[client.type] || INDICATORS.inside_sales;
+    var typeBadgeClass = TYPE_BADGE[client.type] || 'type-inside';
+
+    var head = '<div class="client-header">' +
+      '<h2>' + escapeHtml(client.name) + '</h2>' +
+      '<span class="badge ' + typeBadgeClass + '">' + (TYPE_LABEL[client.type] || client.type) + '</span>' +
+      '</div>';
+
+    if (!monthData){
+      main.innerHTML = head + '<div class="card" style="padding:28px;text-align:center;color:var(--ink-faint);font-size:13.5px;">' +
+        'Nenhuma meta lançada para ' + monthLabel(state.month) + '.' +
+        '</div>';
+      return;
+    }
+
+    var goals = monthData.goals || {};
+    var weeklyTargets = monthData.weekly_targets || {};
+    var weeksData = monthData.weeks || {};
+
+    // goal strip: show a handful of headline indicators
+    var headlineKeys = client.type === 'inside_sales'
+      ? ['investimento','cpl','leads','mqls','sqls','faturamento']
+      : ['investimento','cpl','leads','vendas','faturamento','roas'];
+    var headline = indicators.filter(function(i){
+      return headlineKeys.indexOf(i.key) !== -1;
+    });
+    var goalStrip = '<div class="card goal-strip">' + headline.map(function(i){
+      return '<div class="stat"><div class="k">' + i.label + ' (mês)</div><div class="v">' + fmt(goals[i.key], i.unit) + '</div></div>';
+    }).join('') + '</div>';
+
+    // mês até aqui: comparação do acumulado real do mês com a meta mensal
+    var mtd = monthData.mtd || null;
+    var mtdCard = '';
+    if (mtd && mtd.realizado){
+      var prog = monthProgressPct(state.month, mtd.as_of);
+      var asOfLabel = mtd.as_of ? mtd.as_of.split('-').reverse().slice(0,2).join('/') : '—';
+      var mtdRows = indicators.map(function(i){
+        var goal = goals[i.key];
+        var act = mtd.realizado[i.key];
+        if (goal === undefined && act === undefined) return '';
+        var paceCell;
+        if (i.cumulative && goal){
+          var pctGoal = act !== undefined && act !== null ? (act / goal) * 100 : null;
+          var cls = pctGoal === null ? '' : (pctGoal + 1e-9 >= prog.pct ? 'pace-ok' : 'pace-bad');
+          var tag = pctGoal === null ? '—' : (pctGoal >= prog.pct
+            ? '<span class="pace-tag ok">no ritmo</span>'
+            : '<span class="pace-tag bad">abaixo do ritmo</span>');
+          paceCell = '<td class="num ' + cls + '">' + (pctGoal === null ? '—' : pctGoal.toFixed(0) + '%') + '</td><td class="num">' + tag + '</td>';
+        } else {
+          var hit = (act !== undefined && act !== null && goal !== undefined && goal !== null && i.dir !== 'fixed')
+            ? (i.dir === 'lower' ? act <= goal : act >= goal) : null;
+          var hcls = hit === null ? '' : (hit ? 'pace-ok' : 'pace-bad');
+          paceCell = '<td class="num ' + hcls + '">—</td><td class="num">' + (hit === null ? '—' : (hit ? '<span class="pace-tag ok">dentro da meta</span>' : '<span class="pace-tag bad">fora da meta</span>')) + '</td>';
+        }
+        return '<tr><td>' + i.label + '</td><td class="num">' + fmt(goal, i.unit) + '</td>' +
+          '<td class="num">' + (act === undefined ? '—' : fmt(act, i.unit)) + '</td>' + paceCell + '</tr>';
+      }).join('');
+      mtdCard = '<div class="card mtd-card">' +
+        '<div class="mtd-head"><span class="mtd-title">Mês até aqui</span>' +
+        '<span class="mtd-sub">atualizado em ' + asOfLabel + ' · dia ' + prog.dayNum + ' de ' + prog.totalDays + ' (' + prog.pct.toFixed(0) + '% do mês)</span></div>' +
+        '<div class="table-scroll"><table class="mtd-table"><thead><tr><th>Indicador</th><th class="num">Meta do mês</th><th class="num">Realizado</th><th class="num">% da meta</th><th class="num">Ritmo</th></tr></thead>' +
+        '<tbody>' + mtdRows + '</tbody></table></div></div>';
+    }
+
+    // summary row: count hit / missed / pending among filled weeks
+    var ranges = weekRanges(state.month);
+    var okCount = 0, badCount = 0, pendCount = 0;
+    ranges.forEach(function(r){
+      var w = weeksData[String(r.n)];
+      if (!w || !w.realizado) pendCount++;
+      else if (w.meta_batida === true) okCount++;
+      else if (w.meta_batida === false) badCount++;
+      else pendCount++;
+    });
+    var summaryRow = '<div class="summary-row">' +
+      '<div class="summary-pill ok"><span class="n">' + okCount + '</span><span class="l">semanas na meta</span></div>' +
+      '<div class="summary-pill bad"><span class="n">' + badCount + '</span><span class="l">semanas abaixo</span></div>' +
+      '<div class="summary-pill pending"><span class="n">' + pendCount + '</span><span class="l">aguardando resultado</span></div>' +
+      '</div>';
+
+    // Âncora da meta: por padrão, Vendas quando o cliente mede Vendas; senão,
+    // o indicador cumulativo mais fundo do funil que ele efetivamente tem
+    // meta definida (ex: cliente só de geração de leads usa Leads como
+    // âncora). Um cliente pode sobrescrever isso com client.anchor (ex: Alice
+    // Salazar decidiu acompanhar por SQL em vez de Vendas).
+    var primaryInd = null;
+    if (client.anchor){
+      primaryInd = indicators.find(function(i){ return i.key === client.anchor; }) || null;
+    }
+    if (!primaryInd){
+      var flaggedPrimary = indicators.find(function(i){ return i.primary; });
+      primaryInd = (flaggedPrimary && goals[flaggedPrimary.key] !== undefined) ? flaggedPrimary : null;
+      if (!primaryInd){
+        for (var pi = indicators.length - 1; pi >= 0; pi--){
+          if (indicators[pi].cumulative && goals[indicators[pi].key] !== undefined){ primaryInd = indicators[pi]; break; }
+        }
+      }
+      if (!primaryInd) primaryInd = flaggedPrimary || indicators[indicators.length-1];
+    }
+
+    var weekCards = ranges.map(function(r){
+      var w = weeksData[String(r.n)] || null;
+      var realizado = w && w.realizado || null;
+      var hasResult = !!realizado;
+      var statusClass = 'pending', statusLabel = 'Aguardando';
+      if (hasResult){
+        if (w.meta_batida === true){ statusClass = 'ok'; statusLabel = 'Meta batida'; }
+        else if (w.meta_batida === false){ statusClass = 'bad'; statusLabel = 'Abaixo da meta'; }
+      }
+
+      var target = weeklyTargets[primaryInd.key];
+      var actual = hasResult ? realizado[primaryInd.key] : null;
+      var pct = (target && actual !== null && actual !== undefined) ? Math.max(0, Math.min(100, (actual/target)*100)) : 0;
+      var barClass = hasResult ? (statusClass === 'ok' ? 'ok' : (statusClass === 'bad' ? 'bad' : '')) : '';
+
+      var primaryBlock = '<div class="primary-metric">' +
+        '<span class="val">' + (hasResult ? fmt(actual, primaryInd.unit) : '—') + '</span>' +
+        '<span class="of">de ' + fmt(target, primaryInd.unit) + ' (' + primaryInd.label + ')</span>' +
+        '</div>' +
+        '<div class="bar ' + barClass + '"><i style="width:' + (hasResult ? pct : 0) + '%"></i></div>';
+
+      var funnelRows = indicators.map(function(i){
+        var tgt = weeklyTargets[i.key];
+        var act = realizado ? realizado[i.key] : undefined;
+        var cls = '';
+        if (act !== undefined && act !== null && tgt !== undefined && tgt !== null && i.dir !== 'fixed'){
+          var hit = i.dir === 'lower' ? act <= tgt : act >= tgt;
+          cls = hit ? 'hit' : 'miss';
+        }
+        return '<tr><td>' + i.label + '</td><td class="num">' + fmt(tgt, i.unit) + '</td>' +
+          '<td class="num ' + cls + '">' + (act === undefined ? '—' : fmt(act, i.unit)) + '</td></tr>';
+      }).join('');
+      var funnel = '<details class="funnel"><summary></summary>' +
+        '<table class="funnel-table"><thead><tr><th>Indicador</th><th class="num">Meta sem.</th><th class="num">Realizado</th></tr></thead>' +
+        '<tbody>' + funnelRows + '</tbody></table></details>';
+
+      var fca = '';
+      if (hasResult){
+        var fcaHasContent = w.fca && (w.fca.fato || w.fca.causa || w.fca.acao);
+        if (fcaHasContent){
+          // meta_batida false = plano de ação por não ter batido o indicador-âncora;
+          // meta_batida true = âncora bateu mas algum outro indicador do funil ficou
+          // abaixo, e ainda assim vale registrar o FCA (visual mais neutro, não de alerta).
+          var fcaClass = w.meta_batida === false ? 'filled' : 'partial';
+          fca = '<div class="fca ' + fcaClass + '">' +
+            '<div class="row"><b>Fato</b><span>' + escapeHtml(w.fca.fato || '—') + '</span></div>' +
+            '<div class="row"><b>Causa</b><span>' + escapeHtml(w.fca.causa || '—') + '</span></div>' +
+            '<div class="row"><b>Ação</b><span>' + escapeHtml(w.fca.acao || '—') + '</span></div>' +
+            '</div>';
+        } else if (w.meta_batida === false){
+          fca = '<div class="fca waiting">FCA ainda não registrado para esta semana.</div>';
+        }
+      }
+
+      var body = hasResult ? (primaryBlock + funnel + fca) : '<div class="wk-empty">Sem resultado lançado.</div>';
+
+      return '<div class="card week-card">' +
+        '<div class="wk-head"><div><div class="wk-title">' + r.label + '</div><div class="wk-range">' + r.range + '</div></div>' +
+        '<span class="status-pill ' + statusClass + '">' + statusLabel + '</span></div>' +
+        body +
+        '</div>';
+    }).join('');
+
+    var exampleTag = client.example ? '<div class="example-tag">Cliente de exemplo — substitua pelos seus dados</div>' : '';
+
+    main.innerHTML = head + exampleTag + goalStrip + mtdCard + summaryRow + '<div class="weeks">' + weekCards + '</div>';
+  }
+
+  function init(){
+    state.clients = DATA.clients.slice().sort(function(a,b){ return a.order - b.order; });
+    if (!state.selectedClient && state.clients.length){ state.selectedClient = state.clients[0].id; }
+    document.getElementById('updated-note').textContent = 'Última atualização: ' + formatUpdatedDate(DATA.generatedAt) + '.';
+    renderNav();
+    renderMain();
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
