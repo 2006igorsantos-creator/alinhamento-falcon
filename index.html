@@ -276,37 +276,1136 @@
   // com ou sem conta Claude. "generatedAt" é só a data/hora da última
   // atualização, mostrada no topo do painel.
   var DATA = {
-    generatedAt: "2026-10-05T02:33:36Z",
-    clients: [
-      {id:"official-time", name:"Official Time", type:"ecommerce", order:2},
-      {id:"gsc", name:"GSC", type:"inside_sales", order:3, anchor:"mqls"},
-      {id:"miyamura", name:"Miyamura", type:"inside_sales", order:4},
-      {id:"point-thermic", name:"Point Thermic", type:"inside_sales", order:5},
-      {id:"alice-salazar", name:"Alice Salazar", type:"inside_sales", order:6, anchor:"mqls"},
-      {id:"viagem-dos-sonhos", name:"Viagem Dos Sonhos", type:"inside_sales", order:7},
-      {id:"argiplam", name:"Argiplam", type:"inside_sales", order:8, anchor:"mqls"},
-      {id:"sacrarium-hotel", name:"Sacrarium Hotel", type:"inside_sales", order:9}
-    ],
-    months: {
-      "official-time/2026-09": {"goals":{"custo_venda":195,"faturamento":55000,"investimento":4000,"roas":15.71,"ticket_medio":1350,"vendas":26},"mtd":{"as_of":"2026-09-30","realizado":{"custo_venda":209.7,"faturamento":46528.93,"investimento":5242.41,"roas":8.88,"ticket_medio":1861.16,"vendas":25}},"weekly_targets":{"custo_venda":195,"faturamento":13750,"investimento":1000,"roas":15.71,"ticket_medio":1350,"vendas":6.5},"weeks":{"1":{"fca":{"acao":"Subimos novos criativos em PMAX, criamos uma campanha de Shopping isolada, e vamos testar nova moldura de catálogo com criativos novos.","causa":"CPM caro (provavelmente por conta das eleições), e o funil ainda está em validação: testando criativos e página de destino para achar onde está a maior perda.","fato":"Vendas bateram a meta da semana (9), mas Faturamento (R$12.342 vs meta de R$13.750) e ROAS (10,06x vs meta de 15,71x) ficaram abaixo do esperado."},"meta_batida":true,"realizado":{"custo_venda":136.32,"faturamento":12342,"investimento":1226.89,"roas":10.06,"ticket_medio":1371.33,"vendas":9}},"2":{"fca":{"acao":"","causa":"","fato":"Vendas ficaram dentro da média, mas não bateu a meta por pouco (6 vendas vs meta semanal de 6,5). Faturamento (R$13.511,49 vs meta de R$13.750) e ROAS (10,71x vs meta de 15,71x) também ficaram próximos, mas abaixo do esperado."},"meta_batida":false,"realizado":{"custo_venda":210.25,"faturamento":13511.49,"investimento":1261.52,"roas":10.71,"ticket_medio":2251.92,"vendas":6}},"3":{"meta_batida":true,"realizado":{"custo_venda":154.15,"faturamento":14341.77,"investimento":1079.05,"roas":13.29,"ticket_medio":2048.82,"vendas":7}},"4":{"meta_batida":false,"realizado":{"investimento":1433.94,"vendas":2,"faturamento":5778,"custo_venda":716.97,"ticket_medio":2889,"roas":4.03},"fca":{"fato":"Não bateu a meta de vendas (2 vs meta semanal de 6,5); tivemos muitos pedidos cancelados.","causa":"","acao":"Otimização estratégica — os cancelamentos de última hora derrubaram o resultado da semana."}}}},
-      "official-time/2026-10": {"goals":{"investimento":4000,"vendas":24,"custo_venda":166.67,"ticket_medio":1875,"faturamento":45000,"roas":11.25},"weekly_targets":{"investimento":1000,"vendas":6,"custo_venda":166.67,"ticket_medio":1875,"faturamento":11250,"roas":11.25},"weeks":{},"mtd":{"as_of":"2026-10-01","realizado":{"investimento":244.1,"vendas":0,"faturamento":0}}},
-      "gsc/2026-09": {"goals":{"cpl":66,"custo_mql":142.85,"custo_sql":166.66,"investimento":2000,"leads":30,"mqls":14,"sqls":12,"vendas":2},"mtd":{"as_of":"2026-09-30","realizado":{"cpl":163.23,"custo_mql":272.05,"custo_sql":408.07,"investimento":2448.41,"leads":15,"mqls":9,"sqls":6}},"weekly_targets":{"cpl":66,"custo_mql":142.85,"custo_sql":166.66,"investimento":500,"leads":7.5,"mqls":3.5,"sqls":3,"vendas":0.5},"weeks":{"1":{"fca":{"acao":"Voltar a usar o Meta Ads e enviar o tráfego direto pra LP, além de trabalhar a LP no Google com um teste A/B (a otimização de campanha no Google já foi feita).","causa":"Não teve muitos leads gerados na semana, mas os que geraram são qualificados.","fato":"Não bateu a meta de Leads nem o número de MQL (2 leads e 1 MQL vs meta semanal de 7,5 leads e 3,5 MQLs)."},"realizado":{"cpl":252.01,"custo_mql":504.01,"custo_sql":504.01,"investimento":504.01,"leads":2,"mqls":1,"sqls":1}},"2":{"fca":{"acao":"Subimos a nova LP, campanha do Meta rodando otimizações pontuais no Google e trabalhando teste A/B com o site também.","causa":"","fato":"Não bateu a meta de Leads mas bateu a de MQL (6 leads vs meta semanal de 7,5; 4 MQLs vs meta semanal de 3,5)."},"meta_batida":true,"realizado":{"cpl":99.18,"custo_mql":148.77,"custo_sql":595.08,"investimento":595.08,"leads":6,"mqls":4,"sqls":1}},"3":{"meta_batida":false,"realizado":{"cpl":196.19,"custo_mql":294.28,"custo_sql":294.28,"investimento":588.56,"leads":3,"mqls":2,"sqls":2},"fca":{"fato":"Não bateu a meta de leads nem de MQL (3 leads vs meta semanal de 7,5; 2 MQLs vs meta semanal de 3,5).","causa":"Ainda não subimos o Meta Ads com foco na nova LP.","acao":"Testar o Meta Ads com a nova LP e utilizar os novos criativos."}},"4":{"meta_batida":false,"realizado":{"investimento":487.67,"leads":3,"mqls":1,"sqls":1,"cpl":162.56,"custo_mql":487.67,"custo_sql":487.67},"fca":{"fato":"Não bateu a meta de MQL (1 vs meta semanal de 3,5).","causa":"","acao":"Otimizações pontuais no Google, revisar o trackeamento e o site, já que o cliente demonstrou insatisfação com ele."}}}},
-      "gsc/2026-10": {"goals":{"investimento":2000,"cpl":51.28,"leads":39,"tx_mql":46.15,"mqls":18,"custo_mql":111.11},"weekly_targets":{"investimento":500,"cpl":51.28,"leads":9.75,"tx_mql":46.15,"mqls":4.5,"custo_mql":111.11},"weeks":{},"mtd":{"as_of":"2026-10-01","realizado":{"investimento":95.33}}},
-      "miyamura/2026-09": {"goals":{"cpl":41.66,"custo_mql":100,"custo_sql":285.71,"investimento":2000,"leads":48,"mqls":20,"sqls":7},"mtd":{"as_of":"2026-09-30","realizado":{"cpl":40.28,"custo_mql":317.19,"custo_sql":507.5,"investimento":2537.51,"leads":63,"mqls":8,"sqls":5}},"weekly_targets":{"cpl":41.66,"custo_mql":100,"custo_sql":285.71,"investimento":500,"leads":12,"mqls":5,"sqls":1.75},"weeks":{"1":{"fca":{"acao":"Produzir mais criativos com ganchos diferentes, de preferência em vídeo, e focar nos estados com mais pesquisas no Google.","causa":"Não teve um grande número de leads gerados, e agora está saindo mais caro por lead.","fato":"Não bateu a meta de Leads nem o número de MQL (10 leads e 2 MQLs vs meta semanal de 12 leads e 5 MQLs)."},"meta_batida":true,"realizado":{"cpl":59.08,"custo_mql":295.4,"custo_sql":295.4,"investimento":590.79,"leads":10,"mqls":2,"sqls":2}},"2":{"fca":{"acao":"Otimização pontual no Google e meta produzir mais criativos.","causa":"Também estamos sem visão completa do funil, pois alguns leads não estão sendo marcados nem como descartados nem como MQL.","fato":"Não bateu a meta de MQL (1 MQL vs meta semanal de 5; SQL 1 vs meta semanal de 1,75)."},"meta_batida":false,"realizado":{"cpl":46.49,"custo_mql":557.92,"custo_sql":557.92,"investimento":557.92,"leads":12,"mqls":1,"sqls":1}},"3":{"realizado":{"cpl":36.52,"investimento":584.36,"leads":16},"fca":{"fato":"Bateu a meta de leads (16 vs meta semanal de 12), mas estamos sem visão de parte dos leads de MQL/SQL, então não dá pra medir o indicador-âncora da semana.","causa":"","acao":""}},"4":{"meta_batida":true,"realizado":{"investimento":497.93,"leads":11,"mqls":5,"sqls":2,"cpl":45.27,"custo_mql":99.59,"custo_sql":248.97}}}},
-      "miyamura/2026-10": {"goals":{"investimento":2000,"cpl":40,"leads":50,"tx_mql":30,"mqls":15,"custo_mql":133.33,"tx_sql":60,"sqls":9,"custo_sql":222.22},"weekly_targets":{"investimento":500,"cpl":40,"leads":12.5,"tx_mql":30,"mqls":3.75,"custo_mql":133.33,"tx_sql":60,"sqls":2.25,"custo_sql":222.22},"weeks":{},"mtd":{"as_of":"2026-10-01","realizado":{"investimento":80.77,"leads":3,"cpl":26.92}}},
-      "point-thermic/2026-09": {"goals":{"cpl":77.77,"custo_mql":250,"custo_sql":500,"investimento":3500,"leads":45,"mqls":14,"sqls":7},"mtd":{"as_of":"2026-09-30","realizado":{"cpl":41.58,"investimento":3659.44,"leads":88}},"weekly_targets":{"cpl":77.77,"custo_mql":250,"custo_sql":500,"investimento":875,"leads":11.25,"mqls":3.5,"sqls":1.75},"weeks":{"1":{"fca":{"acao":"Produzir os criativos de acordo com a última otimização, com antes e depois dos serviços prestados, em imagem e vídeo.","causa":"","fato":"Sem visão do CRM deles, mas o cliente deu o feedback que estão com 3 propostas em andamento."},"realizado":{"cpl":50.1,"investimento":851.77,"leads":17}},"2":{"fca":{"acao":"Rever o CRM que eles usam hoje — do jeito que está não conseguimos ter visão de nada nem agilidade comercial.","causa":"","fato":"Sem visão de MQL e SQL essa semana."},"realizado":{"cpl":44.74,"investimento":850,"leads":19}},"3":{"fca":{"acao":"Vamos nos reunir com o time interno deles para saber a melhor opção para validar e ter tudo mapeado.","causa":"","fato":"Estamos sem visão de parte dos leads de MQL/SQL (25 leads na semana vs meta semanal de 11,25)."},"realizado":{"cpl":30.33,"investimento":758.22,"leads":25}},"4":{"realizado":{"investimento":915.67,"leads":15,"cpl":61.04}}}},
-      "point-thermic/2026-10": {"goals":{"investimento":3500,"cpl":81.4,"leads":43,"tx_mql":23.26,"mqls":10,"custo_mql":350},"weekly_targets":{"investimento":875,"cpl":81.4,"leads":10.75,"tx_mql":23.26,"mqls":2.5,"custo_mql":350},"weeks":{},"mtd":{"as_of":"2026-10-01","realizado":{"investimento":153.11,"leads":3,"cpl":51.04}}},
-      "alice-salazar/2026-09": {"goals":{"cpl":14.7,"custo_mql":83.33,"custo_sql":277.78,"custo_venda":1250,"investimento":5000,"leads":340,"mqls":60,"sqls":18,"vendas":4},"mtd":{"as_of":"2026-09-30","realizado":{"cpl":16.83,"custo_mql":64.82,"custo_sql":225.75,"custo_venda":1636.72,"investimento":6546.87,"leads":389,"mqls":101,"sqls":29,"vendas":4}},"weekly_targets":{"cpl":14.7,"custo_mql":83.33,"custo_sql":277.78,"custo_venda":1250,"investimento":1250,"leads":85,"mqls":15,"sqls":4.5,"vendas":1},"weeks":{"1":{"meta_batida":true,"realizado":{"cpl":42.95,"custo_mql":105.95,"custo_sql":397.32,"custo_venda":1589.29,"investimento":1589.29,"leads":37,"mqls":15,"sqls":4,"vendas":1}},"2":{"meta_batida":false,"realizado":{"cpl":8.92,"custo_mql":108.61,"custo_sql":108.61,"investimento":1194.76,"leads":134,"mqls":11,"sqls":11,"vendas":0}},"3":{"meta_batida":false,"realizado":{"cpl":24.91,"custo_mql":132.03,"custo_sql":132.03,"investimento":1320.27,"leads":53,"mqls":10,"sqls":10},"fca":{"fato":"Bateu a meta de SQL (10 vs meta semanal de 4,5), mas Leads (53 vs 85) e MQL (10 vs 15) ficaram abaixo, com CPL de R$24,91 vs meta de R$14,70.","causa":"43 leads sem classificação/visão.","acao":""}},"4":{"meta_batida":true,"realizado":{"investimento":1652.98,"leads":142,"mqls":57,"sqls":4,"vendas":3,"cpl":11.64,"custo_mql":29,"custo_sql":413.25,"custo_venda":550.99},"fca":{"fato":"MQL bateu com folga (57 vs meta de 15) e Vendas também (3 vs 1), mas SQL ficou um pouco abaixo (4 vs 4,5).","causa":"","acao":""}}}},
-      "alice-salazar/2026-10": {"goals":{"investimento":5000,"cpl":16.67,"leads":300,"tx_mql":26,"mqls":78,"custo_mql":64.1,"tx_sql":28.21,"sqls":22,"custo_sql":227.27,"tx_venda":13.64,"vendas":3,"custo_venda":1666.67},"weekly_targets":{"investimento":1250,"cpl":16.67,"leads":75,"tx_mql":26,"mqls":19.5,"custo_mql":64.1,"tx_sql":28.21,"sqls":5.5,"custo_sql":227.27,"tx_venda":13.64,"vendas":0.75,"custo_venda":1666.67},"weeks":{},"mtd":{"as_of":"2026-10-01","realizado":{"investimento":236.15,"leads":18,"mqls":4,"cpl":13.12,"custo_mql":59.04}}},
-      "viagem-dos-sonhos/2026-09": {"goals":{"cpl":7.19,"custo_mql":37.04,"custo_sql":90.91,"investimento":2000,"leads":278,"mqls":54,"sqls":22},"mtd":{"as_of":"2026-09-30","realizado":{"cpl":3.62,"custo_mql":63.1,"custo_sql":180.3,"investimento":1262.09,"leads":349,"mqls":20,"sqls":7}},"weekly_targets":{"cpl":7.19,"custo_mql":37.04,"custo_sql":90.91,"investimento":500,"leads":69.5,"mqls":13.5,"sqls":5.5},"weeks":{"1":{"fca":{"acao":"Produzir criativos buscando qualificar melhor o lead, testando vídeos, e fazer uma entrega a mais pro cliente: a LP.","causa":"","fato":"Não bateu a meta de MQL (6 vs meta semanal de 13,5)."},"meta_batida":false,"realizado":{"cpl":4.42,"custo_mql":59.63,"custo_sql":119.26,"investimento":357.78,"leads":81,"mqls":6,"sqls":3}},"2":{"fca":{"acao":"Tem 29 leads sem classificação, e subimos nova campanha buscando qualificar melhor o lead.","causa":"","fato":"Não bateu a meta de MQL e SQL (8 MQLs e 4 SQLs vs meta semanal de 13,5 MQLs e 5,5 SQLs)."},"meta_batida":false,"realizado":{"cpl":2.96,"custo_mql":43.27,"custo_sql":86.54,"investimento":346.17,"leads":117,"mqls":8,"sqls":4}},"3":{"fca":{"acao":"","causa":"A planilha não foi preenchida a partir do dia 18.","fato":"Sem visão de MQL e SQL na semana (89 leads vs meta semanal de 69,5)."},"realizado":{"cpl":3.28,"investimento":291.91,"leads":89}},"4":{"realizado":{"investimento":98.47,"leads":28,"cpl":3.52},"fca":{"fato":"Sem visão da qualidade dos leads na semana (28 leads, sem classificação de MQL/SQL).","causa":"Comercial não atualizou a planilha de leads.","acao":"Comercial vai atualizar a classificação dos leads."}}}},
-      "viagem-dos-sonhos/2026-10": {"goals":{"investimento":2000,"cpl":4,"leads":500,"tx_mql":10,"mqls":50,"custo_mql":40,"tx_sql":40,"sqls":20,"custo_sql":100},"weekly_targets":{"investimento":500,"cpl":4,"leads":125,"tx_mql":10,"mqls":12.5,"custo_mql":40,"tx_sql":40,"sqls":5,"custo_sql":100},"weeks":{},"mtd":{"as_of":"2026-10-01","realizado":{"investimento":27.84,"leads":7,"cpl":3.98}}},
-      "argiplam/2026-09": {"goals":{"cpl":25,"custo_mql":71.43,"custo_sql":250,"investimento":2000,"leads":80,"mqls":28,"sqls":8},"mtd":{"as_of":"2026-09-30","realizado":{"cpl":16.42,"custo_mql":40.7,"custo_sql":117.01,"investimento":936.11,"leads":57,"mqls":23,"sqls":8}},"weekly_targets":{"cpl":25,"custo_mql":71.43,"custo_sql":250,"investimento":500,"leads":20,"mqls":7,"sqls":2},"weeks":{"2":{"meta_batida":false,"realizado":{"cpl":17.27,"investimento":120.91,"leads":7,"mqls":2,"sqls":0}},"3":{"meta_batida":true,"realizado":{"cpl":10,"custo_mql":24.28,"custo_sql":56.66,"investimento":339.96,"leads":34,"mqls":14,"sqls":6},"fca":{"fato":"Cliente ainda não preencheu a planilha de forma correta.","causa":"","acao":""}},"4":{"meta_batida":true,"realizado":{"investimento":475.24,"leads":16,"mqls":7,"sqls":2,"cpl":29.7,"custo_mql":67.89,"custo_sql":237.62}}}},
-      "argiplam/2026-10": {"goals":{"cpl":25,"custo_mql":71.43,"custo_sql":250,"investimento":2000,"leads":80,"mqls":28,"sqls":8},"weekly_targets":{"cpl":25,"custo_mql":71.43,"custo_sql":250,"investimento":500,"leads":20,"mqls":7,"sqls":2},"weeks":{},"mtd":{"as_of":"2026-10-01","realizado":{"investimento":55.61,"leads":2,"mqls":1,"sqls":1,"cpl":27.81,"custo_mql":55.61,"custo_sql":55.61}}},
-      "sacrarium-hotel/2026-09": {"goals":{"investimento":2000,"cpl":10,"leads":200,"tx_mql":50,"mqls":100,"custo_mql":20,"tx_sql":40,"sqls":40,"custo_sql":50},"weekly_targets":{"investimento":500,"cpl":10,"leads":50,"tx_mql":50,"mqls":25,"custo_mql":20,"tx_sql":40,"sqls":10,"custo_sql":50},"weeks":{"3":{"realizado":{"cpl":1.47,"investimento":27.84,"leads":19}},"4":{"realizado":{"investimento":262.29,"leads":180,"cpl":1.46},"fca":{"fato":"Sem visão de MQL e SQL na semana (180 leads vs meta semanal de 50).","causa":"Comercial do cliente não preencheu a planilha.","acao":"Começar a testar o site agora ou buscar mais feedback do comercial."}}},"mtd":{"as_of":"2026-09-30","realizado":{"cpl":1.46,"investimento":290.13,"leads":199}}},
-      "sacrarium-hotel/2026-10": {"goals":{"investimento":2000,"cpl":10,"leads":200,"tx_mql":50,"mqls":100,"custo_mql":20,"tx_sql":40,"sqls":40,"custo_sql":50},"weekly_targets":{"investimento":500,"cpl":10,"leads":50,"tx_mql":50,"mqls":25,"custo_mql":20,"tx_sql":40,"sqls":10,"custo_sql":50},"weeks":{},"mtd":{"as_of":"2026-10-01","realizado":{"investimento":30.49,"leads":32,"cpl":0.95}}}
+ "generatedAt": "2026-10-09T20:37:43Z",
+ "clients": [
+  {
+   "id": "official-time",
+   "name": "Official Time",
+   "type": "ecommerce",
+   "order": 2
+  },
+  {
+   "id": "gsc",
+   "name": "GSC",
+   "type": "inside_sales",
+   "order": 3,
+   "anchor": "mqls"
+  },
+  {
+   "id": "miyamura",
+   "name": "Miyamura",
+   "type": "inside_sales",
+   "order": 4
+  },
+  {
+   "id": "point-thermic",
+   "name": "Point Thermic",
+   "type": "inside_sales",
+   "order": 5
+  },
+  {
+   "id": "alice-salazar",
+   "name": "Alice Salazar",
+   "type": "inside_sales",
+   "order": 6,
+   "anchor": "mqls"
+  },
+  {
+   "id": "viagem-dos-sonhos",
+   "name": "Viagem Dos Sonhos",
+   "type": "inside_sales",
+   "order": 7
+  },
+  {
+   "id": "argiplam",
+   "name": "Argiplam",
+   "type": "inside_sales",
+   "order": 8,
+   "anchor": "mqls"
+  },
+  {
+   "id": "sacrarium-hotel",
+   "name": "Sacrarium Hotel",
+   "type": "inside_sales",
+   "order": 9
+  }
+ ],
+ "months": {
+  "official-time/2026-09": {
+   "goals": {
+    "custo_venda": 195,
+    "faturamento": 55000,
+    "investimento": 4000,
+    "roas": 15.71,
+    "ticket_medio": 1350,
+    "vendas": 26
+   },
+   "mtd": {
+    "as_of": "2026-09-30",
+    "realizado": {
+     "custo_venda": 209.7,
+     "faturamento": 46528.93,
+     "investimento": 5242.41,
+     "roas": 8.88,
+     "ticket_medio": 1861.16,
+     "vendas": 25
     }
-  };
-
+   },
+   "weekly_targets": {
+    "custo_venda": 195,
+    "faturamento": 13750,
+    "investimento": 1000,
+    "roas": 15.71,
+    "ticket_medio": 1350,
+    "vendas": 6.5
+   },
+   "weeks": {
+    "1": {
+     "fca": {
+      "acao": "Subimos novos criativos em PMAX, criamos uma campanha de Shopping isolada, e vamos testar nova moldura de catálogo com criativos novos.",
+      "causa": "CPM caro (provavelmente por conta das eleições), e o funil ainda está em validação: testando criativos e página de destino para achar onde está a maior perda.",
+      "fato": "Vendas bateram a meta da semana (9), mas Faturamento (R$12.342 vs meta de R$13.750) e ROAS (10,06x vs meta de 15,71x) ficaram abaixo do esperado."
+     },
+     "meta_batida": true,
+     "realizado": {
+      "custo_venda": 136.32,
+      "faturamento": 12342,
+      "investimento": 1226.89,
+      "roas": 10.06,
+      "ticket_medio": 1371.33,
+      "vendas": 9
+     }
+    },
+    "2": {
+     "fca": {
+      "acao": "",
+      "causa": "",
+      "fato": "Vendas ficaram dentro da média, mas não bateu a meta por pouco (6 vendas vs meta semanal de 6,5). Faturamento (R$13.511,49 vs meta de R$13.750) e ROAS (10,71x vs meta de 15,71x) também ficaram próximos, mas abaixo do esperado."
+     },
+     "meta_batida": false,
+     "realizado": {
+      "custo_venda": 210.25,
+      "faturamento": 13511.49,
+      "investimento": 1261.52,
+      "roas": 10.71,
+      "ticket_medio": 2251.92,
+      "vendas": 6
+     }
+    },
+    "3": {
+     "meta_batida": true,
+     "realizado": {
+      "custo_venda": 154.15,
+      "faturamento": 14341.77,
+      "investimento": 1079.05,
+      "roas": 13.29,
+      "ticket_medio": 2048.82,
+      "vendas": 7
+     }
+    },
+    "4": {
+     "meta_batida": false,
+     "realizado": {
+      "investimento": 1433.94,
+      "vendas": 2,
+      "faturamento": 5778,
+      "custo_venda": 716.97,
+      "ticket_medio": 2889,
+      "roas": 4.03
+     },
+     "fca": {
+      "fato": "Não bateu a meta de vendas (2 vs meta semanal de 6,5); tivemos muitos pedidos cancelados.",
+      "causa": "",
+      "acao": "Otimização estratégica — os cancelamentos de última hora derrubaram o resultado da semana."
+     }
+    }
+   }
+  },
+  "official-time/2026-10": {
+   "goals": {
+    "investimento": 4000,
+    "vendas": 24,
+    "custo_venda": 166.67,
+    "ticket_medio": 1875,
+    "faturamento": 45000,
+    "roas": 11.25
+   },
+   "weekly_targets": {
+    "investimento": 1000,
+    "vendas": 6,
+    "custo_venda": 166.67,
+    "ticket_medio": 1875,
+    "faturamento": 11250,
+    "roas": 11.25
+   },
+   "weeks": {
+    "1": {
+     "meta_batida": false,
+     "realizado": {
+      "investimento": 995.87,
+      "vendas": 5,
+      "custo_venda": 199.17,
+      "ticket_medio": 792.22,
+      "faturamento": 3961.12,
+      "roas": 3.98
+     },
+     "fca": {
+      "fato": "Não bateu a meta de vendas (5 vs meta semanal de 6) nem de faturamento (R$ 3.961,12 vs meta de R$ 11.250); ROAS de 3,98x vs meta de 11,25x.",
+      "causa": "O ticket médio caiu bastante (R$ 792,22 vs meta de R$ 1.875), derrubando o faturamento mesmo com volume de vendas próximo da meta.",
+      "acao": "Otimizar todas as frentes das plataformas e do gerenciador de anúncios, com ações para recuperar o ticket médio e mais peso nos produtos de ticket maior nos anúncios."
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-10-08",
+    "realizado": {
+     "investimento": 1239.97,
+     "vendas": 5,
+     "faturamento": 3961.12,
+     "custo_venda": 247.99,
+     "ticket_medio": 792.22,
+     "roas": 3.19
+    }
+   }
+  },
+  "gsc/2026-09": {
+   "goals": {
+    "cpl": 66,
+    "custo_mql": 142.85,
+    "custo_sql": 166.66,
+    "investimento": 2000,
+    "leads": 30,
+    "mqls": 14,
+    "sqls": 12,
+    "vendas": 2
+   },
+   "mtd": {
+    "as_of": "2026-09-30",
+    "realizado": {
+     "cpl": 163.23,
+     "custo_mql": 272.05,
+     "custo_sql": 408.07,
+     "investimento": 2448.41,
+     "leads": 15,
+     "mqls": 9,
+     "sqls": 6
+    }
+   },
+   "weekly_targets": {
+    "cpl": 66,
+    "custo_mql": 142.85,
+    "custo_sql": 166.66,
+    "investimento": 500,
+    "leads": 7.5,
+    "mqls": 3.5,
+    "sqls": 3,
+    "vendas": 0.5
+   },
+   "weeks": {
+    "1": {
+     "fca": {
+      "acao": "Voltar a usar o Meta Ads e enviar o tráfego direto pra LP, além de trabalhar a LP no Google com um teste A/B (a otimização de campanha no Google já foi feita).",
+      "causa": "Não teve muitos leads gerados na semana, mas os que geraram são qualificados.",
+      "fato": "Não bateu a meta de Leads nem o número de MQL (2 leads e 1 MQL vs meta semanal de 7,5 leads e 3,5 MQLs)."
+     },
+     "realizado": {
+      "cpl": 252.01,
+      "custo_mql": 504.01,
+      "custo_sql": 504.01,
+      "investimento": 504.01,
+      "leads": 2,
+      "mqls": 1,
+      "sqls": 1
+     }
+    },
+    "2": {
+     "fca": {
+      "acao": "Subimos a nova LP, campanha do Meta rodando otimizações pontuais no Google e trabalhando teste A/B com o site também.",
+      "causa": "",
+      "fato": "Não bateu a meta de Leads mas bateu a de MQL (6 leads vs meta semanal de 7,5; 4 MQLs vs meta semanal de 3,5)."
+     },
+     "meta_batida": true,
+     "realizado": {
+      "cpl": 99.18,
+      "custo_mql": 148.77,
+      "custo_sql": 595.08,
+      "investimento": 595.08,
+      "leads": 6,
+      "mqls": 4,
+      "sqls": 1
+     }
+    },
+    "3": {
+     "meta_batida": false,
+     "realizado": {
+      "cpl": 196.19,
+      "custo_mql": 294.28,
+      "custo_sql": 294.28,
+      "investimento": 588.56,
+      "leads": 3,
+      "mqls": 2,
+      "sqls": 2
+     },
+     "fca": {
+      "fato": "Não bateu a meta de leads nem de MQL (3 leads vs meta semanal de 7,5; 2 MQLs vs meta semanal de 3,5).",
+      "causa": "Ainda não subimos o Meta Ads com foco na nova LP.",
+      "acao": "Testar o Meta Ads com a nova LP e utilizar os novos criativos."
+     }
+    },
+    "4": {
+     "meta_batida": false,
+     "realizado": {
+      "investimento": 487.67,
+      "leads": 3,
+      "mqls": 1,
+      "sqls": 1,
+      "cpl": 162.56,
+      "custo_mql": 487.67,
+      "custo_sql": 487.67
+     },
+     "fca": {
+      "fato": "Não bateu a meta de MQL (1 vs meta semanal de 3,5).",
+      "causa": "",
+      "acao": "Otimizações pontuais no Google, revisar o trackeamento e o site, já que o cliente demonstrou insatisfação com ele."
+     }
+    }
+   }
+  },
+  "gsc/2026-10": {
+   "goals": {
+    "investimento": 2000,
+    "cpl": 51.28,
+    "leads": 39,
+    "tx_mql": 46.15,
+    "mqls": 18,
+    "custo_mql": 111.11
+   },
+   "weekly_targets": {
+    "investimento": 500,
+    "cpl": 51.28,
+    "leads": 9.75,
+    "tx_mql": 46.15,
+    "mqls": 4.5,
+    "custo_mql": 111.11
+   },
+   "weeks": {
+    "1": {
+     "meta_batida": false,
+     "realizado": {
+      "investimento": 621.99,
+      "leads": 10,
+      "mqls": 2,
+      "cpl": 62.2,
+      "custo_mql": 311
+     },
+     "fca": {
+      "fato": "Bateu a meta de leads (10 vs meta semanal de 9,75), mas não a de MQL (2 vs meta semanal de 4,5).",
+      "causa": "",
+      "acao": "Já realizamos as ações alinhadas na quarta-feira; aguardando a resposta das otimizações nos próximos dias."
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-10-08",
+    "realizado": {
+     "investimento": 717.32,
+     "leads": 10,
+     "mqls": 2,
+     "cpl": 71.73,
+     "custo_mql": 358.66
+    }
+   }
+  },
+  "miyamura/2026-09": {
+   "goals": {
+    "cpl": 41.66,
+    "custo_mql": 100,
+    "custo_sql": 285.71,
+    "investimento": 2000,
+    "leads": 48,
+    "mqls": 20,
+    "sqls": 7
+   },
+   "mtd": {
+    "as_of": "2026-09-30",
+    "realizado": {
+     "cpl": 40.28,
+     "custo_mql": 317.19,
+     "custo_sql": 507.5,
+     "investimento": 2537.51,
+     "leads": 63,
+     "mqls": 8,
+     "sqls": 5
+    }
+   },
+   "weekly_targets": {
+    "cpl": 41.66,
+    "custo_mql": 100,
+    "custo_sql": 285.71,
+    "investimento": 500,
+    "leads": 12,
+    "mqls": 5,
+    "sqls": 1.75
+   },
+   "weeks": {
+    "1": {
+     "fca": {
+      "acao": "Produzir mais criativos com ganchos diferentes, de preferência em vídeo, e focar nos estados com mais pesquisas no Google.",
+      "causa": "Não teve um grande número de leads gerados, e agora está saindo mais caro por lead.",
+      "fato": "Não bateu a meta de Leads nem o número de MQL (10 leads e 2 MQLs vs meta semanal de 12 leads e 5 MQLs)."
+     },
+     "meta_batida": true,
+     "realizado": {
+      "cpl": 59.08,
+      "custo_mql": 295.4,
+      "custo_sql": 295.4,
+      "investimento": 590.79,
+      "leads": 10,
+      "mqls": 2,
+      "sqls": 2
+     }
+    },
+    "2": {
+     "fca": {
+      "acao": "Otimização pontual no Google e meta produzir mais criativos.",
+      "causa": "Também estamos sem visão completa do funil, pois alguns leads não estão sendo marcados nem como descartados nem como MQL.",
+      "fato": "Não bateu a meta de MQL (1 MQL vs meta semanal de 5; SQL 1 vs meta semanal de 1,75)."
+     },
+     "meta_batida": false,
+     "realizado": {
+      "cpl": 46.49,
+      "custo_mql": 557.92,
+      "custo_sql": 557.92,
+      "investimento": 557.92,
+      "leads": 12,
+      "mqls": 1,
+      "sqls": 1
+     }
+    },
+    "3": {
+     "realizado": {
+      "cpl": 36.52,
+      "investimento": 584.36,
+      "leads": 16
+     },
+     "fca": {
+      "fato": "Bateu a meta de leads (16 vs meta semanal de 12), mas estamos sem visão de parte dos leads de MQL/SQL, então não dá pra medir o indicador-âncora da semana.",
+      "causa": "",
+      "acao": ""
+     }
+    },
+    "4": {
+     "meta_batida": true,
+     "realizado": {
+      "investimento": 497.93,
+      "leads": 11,
+      "mqls": 5,
+      "sqls": 2,
+      "cpl": 45.27,
+      "custo_mql": 99.59,
+      "custo_sql": 248.97
+     }
+    }
+   }
+  },
+  "miyamura/2026-10": {
+   "goals": {
+    "investimento": 2000,
+    "cpl": 40,
+    "leads": 50,
+    "tx_mql": 30,
+    "mqls": 15,
+    "custo_mql": 133.33,
+    "tx_sql": 60,
+    "sqls": 9,
+    "custo_sql": 222.22
+   },
+   "weekly_targets": {
+    "investimento": 500,
+    "cpl": 40,
+    "leads": 12.5,
+    "tx_mql": 30,
+    "mqls": 3.75,
+    "custo_mql": 133.33,
+    "tx_sql": 60,
+    "sqls": 2.25,
+    "custo_sql": 222.22
+   },
+   "weeks": {
+    "1": {
+     "realizado": {
+      "investimento": 241.62,
+      "leads": 6,
+      "mqls": 2,
+      "cpl": 40.27,
+      "custo_mql": 120.81
+     },
+     "fca": {
+      "fato": "Não bateu a meta de leads (6 vs meta semanal de 12,5) nem de MQL (2 vs meta semanal de 3,75).",
+      "causa": "A landing page ficou fora do ar durante a semana.",
+      "acao": "Reativar a LP para retomar o bom desempenho das campanhas."
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-10-08",
+    "realizado": {
+     "investimento": 322.39,
+     "leads": 9,
+     "mqls": 2,
+     "cpl": 35.82,
+     "custo_mql": 161.19
+    }
+   }
+  },
+  "point-thermic/2026-09": {
+   "goals": {
+    "cpl": 77.77,
+    "custo_mql": 250,
+    "custo_sql": 500,
+    "investimento": 3500,
+    "leads": 45,
+    "mqls": 14,
+    "sqls": 7
+   },
+   "mtd": {
+    "as_of": "2026-09-30",
+    "realizado": {
+     "cpl": 41.58,
+     "investimento": 3659.44,
+     "leads": 88
+    }
+   },
+   "weekly_targets": {
+    "cpl": 77.77,
+    "custo_mql": 250,
+    "custo_sql": 500,
+    "investimento": 875,
+    "leads": 11.25,
+    "mqls": 3.5,
+    "sqls": 1.75
+   },
+   "weeks": {
+    "1": {
+     "fca": {
+      "acao": "Produzir os criativos de acordo com a última otimização, com antes e depois dos serviços prestados, em imagem e vídeo.",
+      "causa": "",
+      "fato": "Sem visão do CRM deles, mas o cliente deu o feedback que estão com 3 propostas em andamento."
+     },
+     "realizado": {
+      "cpl": 50.1,
+      "investimento": 851.77,
+      "leads": 17
+     }
+    },
+    "2": {
+     "fca": {
+      "acao": "Rever o CRM que eles usam hoje — do jeito que está não conseguimos ter visão de nada nem agilidade comercial.",
+      "causa": "",
+      "fato": "Sem visão de MQL e SQL essa semana."
+     },
+     "realizado": {
+      "cpl": 44.74,
+      "investimento": 850,
+      "leads": 19
+     }
+    },
+    "3": {
+     "fca": {
+      "acao": "Vamos nos reunir com o time interno deles para saber a melhor opção para validar e ter tudo mapeado.",
+      "causa": "",
+      "fato": "Estamos sem visão de parte dos leads de MQL/SQL (25 leads na semana vs meta semanal de 11,25)."
+     },
+     "realizado": {
+      "cpl": 30.33,
+      "investimento": 758.22,
+      "leads": 25
+     }
+    },
+    "4": {
+     "realizado": {
+      "investimento": 915.67,
+      "leads": 15,
+      "cpl": 61.04
+     }
+    }
+   }
+  },
+  "point-thermic/2026-10": {
+   "goals": {
+    "investimento": 3500,
+    "cpl": 81.4,
+    "leads": 43,
+    "tx_mql": 23.26,
+    "mqls": 10,
+    "custo_mql": 350
+   },
+   "weekly_targets": {
+    "investimento": 875,
+    "cpl": 81.4,
+    "leads": 10.75,
+    "tx_mql": 23.26,
+    "mqls": 2.5,
+    "custo_mql": 350
+   },
+   "weeks": {
+    "1": {
+     "meta_batida": true,
+     "realizado": {
+      "investimento": 839.24,
+      "leads": 12,
+      "mqls": 8,
+      "sqls": 4,
+      "cpl": 69.94,
+      "custo_mql": 104.91,
+      "custo_sql": 209.81
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-10-08",
+    "realizado": {
+     "investimento": 992.35,
+     "leads": 15,
+     "mqls": 8,
+     "sqls": 4,
+     "cpl": 66.16,
+     "custo_mql": 124.04,
+     "custo_sql": 248.09
+    }
+   }
+  },
+  "alice-salazar/2026-09": {
+   "goals": {
+    "cpl": 14.7,
+    "custo_mql": 83.33,
+    "custo_sql": 277.78,
+    "custo_venda": 1250,
+    "investimento": 5000,
+    "leads": 340,
+    "mqls": 60,
+    "sqls": 18,
+    "vendas": 4
+   },
+   "mtd": {
+    "as_of": "2026-09-30",
+    "realizado": {
+     "cpl": 16.83,
+     "custo_mql": 64.82,
+     "custo_sql": 225.75,
+     "custo_venda": 1636.72,
+     "investimento": 6546.87,
+     "leads": 389,
+     "mqls": 101,
+     "sqls": 29,
+     "vendas": 4
+    }
+   },
+   "weekly_targets": {
+    "cpl": 14.7,
+    "custo_mql": 83.33,
+    "custo_sql": 277.78,
+    "custo_venda": 1250,
+    "investimento": 1250,
+    "leads": 85,
+    "mqls": 15,
+    "sqls": 4.5,
+    "vendas": 1
+   },
+   "weeks": {
+    "1": {
+     "meta_batida": true,
+     "realizado": {
+      "cpl": 42.95,
+      "custo_mql": 105.95,
+      "custo_sql": 397.32,
+      "custo_venda": 1589.29,
+      "investimento": 1589.29,
+      "leads": 37,
+      "mqls": 15,
+      "sqls": 4,
+      "vendas": 1
+     }
+    },
+    "2": {
+     "meta_batida": false,
+     "realizado": {
+      "cpl": 8.92,
+      "custo_mql": 108.61,
+      "custo_sql": 108.61,
+      "investimento": 1194.76,
+      "leads": 134,
+      "mqls": 11,
+      "sqls": 11,
+      "vendas": 0
+     }
+    },
+    "3": {
+     "meta_batida": false,
+     "realizado": {
+      "cpl": 24.91,
+      "custo_mql": 132.03,
+      "custo_sql": 132.03,
+      "investimento": 1320.27,
+      "leads": 53,
+      "mqls": 10,
+      "sqls": 10
+     },
+     "fca": {
+      "fato": "Bateu a meta de SQL (10 vs meta semanal de 4,5), mas Leads (53 vs 85) e MQL (10 vs 15) ficaram abaixo, com CPL de R$24,91 vs meta de R$14,70.",
+      "causa": "43 leads sem classificação/visão.",
+      "acao": ""
+     }
+    },
+    "4": {
+     "meta_batida": true,
+     "realizado": {
+      "investimento": 1652.98,
+      "leads": 142,
+      "mqls": 57,
+      "sqls": 4,
+      "vendas": 3,
+      "cpl": 11.64,
+      "custo_mql": 29,
+      "custo_sql": 413.25,
+      "custo_venda": 550.99
+     },
+     "fca": {
+      "fato": "MQL bateu com folga (57 vs meta de 15) e Vendas também (3 vs 1), mas SQL ficou um pouco abaixo (4 vs 4,5).",
+      "causa": "",
+      "acao": ""
+     }
+    }
+   }
+  },
+  "alice-salazar/2026-10": {
+   "goals": {
+    "investimento": 5000,
+    "cpl": 16.67,
+    "leads": 300,
+    "tx_mql": 26,
+    "mqls": 78,
+    "custo_mql": 64.1,
+    "tx_sql": 28.21,
+    "sqls": 22,
+    "custo_sql": 227.27,
+    "tx_venda": 13.64,
+    "vendas": 3,
+    "custo_venda": 1666.67
+   },
+   "weekly_targets": {
+    "investimento": 1250,
+    "cpl": 16.67,
+    "leads": 75,
+    "tx_mql": 26,
+    "mqls": 19.5,
+    "custo_mql": 64.1,
+    "tx_sql": 28.21,
+    "sqls": 5.5,
+    "custo_sql": 227.27,
+    "tx_venda": 13.64,
+    "vendas": 0.75,
+    "custo_venda": 1666.67
+   },
+   "weeks": {
+    "1": {
+     "meta_batida": false,
+     "realizado": {
+      "investimento": 1467.46,
+      "leads": 109,
+      "mqls": 19,
+      "sqls": 5,
+      "vendas": 2,
+      "cpl": 13.46,
+      "custo_mql": 77.23,
+      "custo_sql": 293.49,
+      "custo_venda": 733.73
+     },
+     "fca": {
+      "fato": "Ficou próximo da meta de MQL (19 vs meta semanal de 19,5), com 109 leads gerados (meta de 75), porém 94 leads ficaram sem classificação.",
+      "causa": "",
+      "acao": ""
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-10-08",
+    "realizado": {
+     "investimento": 1703.61,
+     "leads": 127,
+     "mqls": 23,
+     "sqls": 5,
+     "vendas": 2,
+     "cpl": 13.41,
+     "custo_mql": 74.07,
+     "custo_sql": 340.72,
+     "custo_venda": 851.8
+    }
+   }
+  },
+  "viagem-dos-sonhos/2026-09": {
+   "goals": {
+    "cpl": 7.19,
+    "custo_mql": 37.04,
+    "custo_sql": 90.91,
+    "investimento": 2000,
+    "leads": 278,
+    "mqls": 54,
+    "sqls": 22
+   },
+   "mtd": {
+    "as_of": "2026-09-30",
+    "realizado": {
+     "cpl": 3.62,
+     "custo_mql": 63.1,
+     "custo_sql": 180.3,
+     "investimento": 1262.09,
+     "leads": 349,
+     "mqls": 20,
+     "sqls": 7
+    }
+   },
+   "weekly_targets": {
+    "cpl": 7.19,
+    "custo_mql": 37.04,
+    "custo_sql": 90.91,
+    "investimento": 500,
+    "leads": 69.5,
+    "mqls": 13.5,
+    "sqls": 5.5
+   },
+   "weeks": {
+    "1": {
+     "fca": {
+      "acao": "Produzir criativos buscando qualificar melhor o lead, testando vídeos, e fazer uma entrega a mais pro cliente: a LP.",
+      "causa": "",
+      "fato": "Não bateu a meta de MQL (6 vs meta semanal de 13,5)."
+     },
+     "meta_batida": false,
+     "realizado": {
+      "cpl": 4.42,
+      "custo_mql": 59.63,
+      "custo_sql": 119.26,
+      "investimento": 357.78,
+      "leads": 81,
+      "mqls": 6,
+      "sqls": 3
+     }
+    },
+    "2": {
+     "fca": {
+      "acao": "Tem 29 leads sem classificação, e subimos nova campanha buscando qualificar melhor o lead.",
+      "causa": "",
+      "fato": "Não bateu a meta de MQL e SQL (8 MQLs e 4 SQLs vs meta semanal de 13,5 MQLs e 5,5 SQLs)."
+     },
+     "meta_batida": false,
+     "realizado": {
+      "cpl": 2.96,
+      "custo_mql": 43.27,
+      "custo_sql": 86.54,
+      "investimento": 346.17,
+      "leads": 117,
+      "mqls": 8,
+      "sqls": 4
+     }
+    },
+    "3": {
+     "fca": {
+      "acao": "",
+      "causa": "A planilha não foi preenchida a partir do dia 18.",
+      "fato": "Sem visão de MQL e SQL na semana (89 leads vs meta semanal de 69,5)."
+     },
+     "realizado": {
+      "cpl": 3.28,
+      "investimento": 291.91,
+      "leads": 89
+     }
+    },
+    "4": {
+     "realizado": {
+      "investimento": 98.47,
+      "leads": 28,
+      "cpl": 3.52
+     },
+     "fca": {
+      "fato": "Sem visão da qualidade dos leads na semana (28 leads, sem classificação de MQL/SQL).",
+      "causa": "Comercial não atualizou a planilha de leads.",
+      "acao": "Comercial vai atualizar a classificação dos leads."
+     }
+    }
+   }
+  },
+  "viagem-dos-sonhos/2026-10": {
+   "goals": {
+    "investimento": 1300,
+    "cpl": 3.5,
+    "leads": 370,
+    "tx_mql": 7,
+    "mqls": 26,
+    "custo_mql": 50,
+    "tx_sql": 50,
+    "sqls": 13,
+    "custo_sql": 100
+   },
+   "weekly_targets": {
+    "investimento": 325,
+    "cpl": 3.5,
+    "leads": 92.5,
+    "tx_mql": 7,
+    "mqls": 6.5,
+    "custo_mql": 50,
+    "tx_sql": 50,
+    "sqls": 3.25,
+    "custo_sql": 100
+   },
+   "weeks": {
+    "1": {
+     "realizado": {
+      "investimento": 274.54,
+      "leads": 107,
+      "cpl": 2.57
+     },
+     "fca": {
+      "fato": "Bateu a meta de leads (107 vs meta semanal de 92,5) com CPL de R$ 2,57 (meta R$ 3,50), mas sem visão da qualidade dos leads: MQLs e SQLs não foram classificados.",
+      "causa": "",
+      "acao": ""
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-10-08",
+    "realizado": {
+     "investimento": 302.38,
+     "leads": 114,
+     "cpl": 2.65
+    }
+   }
+  },
+  "argiplam/2026-09": {
+   "goals": {
+    "cpl": 25,
+    "custo_mql": 71.43,
+    "custo_sql": 250,
+    "investimento": 2000,
+    "leads": 80,
+    "mqls": 28,
+    "sqls": 8
+   },
+   "mtd": {
+    "as_of": "2026-09-30",
+    "realizado": {
+     "cpl": 16.42,
+     "custo_mql": 40.7,
+     "custo_sql": 117.01,
+     "investimento": 936.11,
+     "leads": 57,
+     "mqls": 23,
+     "sqls": 8
+    }
+   },
+   "weekly_targets": {
+    "cpl": 25,
+    "custo_mql": 71.43,
+    "custo_sql": 250,
+    "investimento": 500,
+    "leads": 20,
+    "mqls": 7,
+    "sqls": 2
+   },
+   "weeks": {
+    "2": {
+     "meta_batida": false,
+     "realizado": {
+      "cpl": 17.27,
+      "investimento": 120.91,
+      "leads": 7,
+      "mqls": 2,
+      "sqls": 0
+     }
+    },
+    "3": {
+     "meta_batida": true,
+     "realizado": {
+      "cpl": 10,
+      "custo_mql": 24.28,
+      "custo_sql": 56.66,
+      "investimento": 339.96,
+      "leads": 34,
+      "mqls": 14,
+      "sqls": 6
+     },
+     "fca": {
+      "fato": "Cliente ainda não preencheu a planilha de forma correta.",
+      "causa": "",
+      "acao": ""
+     }
+    },
+    "4": {
+     "meta_batida": true,
+     "realizado": {
+      "investimento": 475.24,
+      "leads": 16,
+      "mqls": 7,
+      "sqls": 2,
+      "cpl": 29.7,
+      "custo_mql": 67.89,
+      "custo_sql": 237.62
+     }
+    }
+   }
+  },
+  "argiplam/2026-10": {
+   "goals": {
+    "cpl": 25,
+    "custo_mql": 71.43,
+    "custo_sql": 250,
+    "investimento": 2000,
+    "leads": 80,
+    "mqls": 28,
+    "sqls": 8
+   },
+   "weekly_targets": {
+    "cpl": 25,
+    "custo_mql": 71.43,
+    "custo_sql": 250,
+    "investimento": 500,
+    "leads": 20,
+    "mqls": 7,
+    "sqls": 2
+   },
+   "weeks": {
+    "1": {
+     "meta_batida": false,
+     "realizado": {
+      "investimento": 573.51,
+      "leads": 11,
+      "mqls": 2,
+      "sqls": 1,
+      "cpl": 52.14,
+      "custo_mql": 286.76,
+      "custo_sql": 573.51
+     },
+     "fca": {
+      "fato": "Não bateu a meta de MQL (2 vs meta semanal de 7), com R$ 573,51 investidos e CPL de R$ 52,14 (meta R$ 25).",
+      "causa": "",
+      "acao": "Gravar novos criativos com uma nova comunicação e fazer um teste A/B direcionando para o WhatsApp."
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-10-08",
+    "realizado": {
+     "investimento": 629.12,
+     "leads": 13,
+     "mqls": 3,
+     "sqls": 2,
+     "cpl": 48.39,
+     "custo_mql": 209.71,
+     "custo_sql": 314.56
+    }
+   }
+  },
+  "sacrarium-hotel/2026-09": {
+   "goals": {
+    "investimento": 2000,
+    "cpl": 10,
+    "leads": 200,
+    "tx_mql": 50,
+    "mqls": 100,
+    "custo_mql": 20,
+    "tx_sql": 40,
+    "sqls": 40,
+    "custo_sql": 50
+   },
+   "weekly_targets": {
+    "investimento": 500,
+    "cpl": 10,
+    "leads": 50,
+    "tx_mql": 50,
+    "mqls": 25,
+    "custo_mql": 20,
+    "tx_sql": 40,
+    "sqls": 10,
+    "custo_sql": 50
+   },
+   "weeks": {
+    "3": {
+     "realizado": {
+      "cpl": 1.47,
+      "investimento": 27.84,
+      "leads": 19
+     }
+    },
+    "4": {
+     "realizado": {
+      "investimento": 262.29,
+      "leads": 180,
+      "cpl": 1.46
+     },
+     "fca": {
+      "fato": "Sem visão de MQL e SQL na semana (180 leads vs meta semanal de 50).",
+      "causa": "Comercial do cliente não preencheu a planilha.",
+      "acao": "Começar a testar o site agora ou buscar mais feedback do comercial."
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-09-30",
+    "realizado": {
+     "cpl": 1.46,
+     "investimento": 290.13,
+     "leads": 199
+    }
+   }
+  },
+  "sacrarium-hotel/2026-10": {
+   "goals": {
+    "investimento": 2000,
+    "cpl": 10,
+    "leads": 200,
+    "tx_mql": 50,
+    "mqls": 100,
+    "custo_mql": 20,
+    "tx_sql": 40,
+    "sqls": 40,
+    "custo_sql": 50
+   },
+   "weekly_targets": {
+    "investimento": 500,
+    "cpl": 10,
+    "leads": 50,
+    "tx_mql": 50,
+    "mqls": 25,
+    "custo_mql": 20,
+    "tx_sql": 40,
+    "sqls": 10,
+    "custo_sql": 50
+   },
+   "weeks": {
+    "1": {
+     "realizado": {
+      "investimento": 281.82,
+      "leads": 311,
+      "cpl": 0.91
+     },
+     "fca": {
+      "fato": "311 leads gerados (meta semanal de 50) com CPL de R$ 0,91 (meta R$ 10), mas sem visão de MQL e SQL: o cliente está atualizando a planilha aos poucos.",
+      "causa": "",
+      "acao": "Fazer um teste A/B direcionando o tráfego para o site."
+     }
+    }
+   },
+   "mtd": {
+    "as_of": "2026-10-08",
+    "realizado": {
+     "investimento": 312.31,
+     "leads": 343,
+     "cpl": 0.91
+    }
+   }
+  }
+ }
+};
   var INDICATORS = {
     inside_sales: [
       {key:'investimento', label:'Investimento', unit:'currency', cumulative:true, dir:'fixed'},
